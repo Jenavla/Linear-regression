@@ -8,7 +8,7 @@ Required Python libraries: pandas, numpy, scikit-learn, matplotlib, seaborn, sci
 
 # Getting Started
 1. Clone this repository to your local machine.
-2. Adjust the script according to your needs. You can modify the following parameters in the script to work with your specific dataset
+2. Adjust the script according to your needs. You can modify the following parameters in the script to work with your specific dataset:
 data - Load your dataset using pandas, specifying the file path and separator.
 target_col - Set the target variable (the variable you want to predict).
 feature_cols - Define the feature columns you want to use for prediction.
