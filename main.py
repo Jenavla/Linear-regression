@@ -11,7 +11,7 @@ import seaborn as sns
 data = pd.read_csv('student-mat.csv', sep=',')
 target_col = 'G3'
 feature_cols = ['G1', 'G2']
-test_size = 0.8
+test_size = 0.9
 zscore_threshold = 2.576 # 99% interval
 
 def perform_linear_regression(data, target_col, feature_cols, random_state=None):
@@ -51,6 +51,10 @@ def perform_linear_regression(data, target_col, feature_cols, random_state=None)
         'RMSE': rmse,
         'coefficients': pd.DataFrame({'': x.columns, '': lm.coef_})
     }
+    
+    # Plot a histogram of the residuals
+    sns.histplot((y_test-predictions), bins=50)
+    plt.show()
 
     return results
 
